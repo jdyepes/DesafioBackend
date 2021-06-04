@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApplicationBackend</name>
+    </assembly>
+    <members>
+        <member name="M:WebApplicationBackend.BusinessLogic.Command.Aspirante.ComandoActualizarAspirante.Ejecutar">
+            <summary>
+            Realiza el llamado para la actualizacion del aspirante por el numero de indentificacion
+            </summary>
+        </member>
+        <member name="M:WebApplicationBackend.BusinessLogic.Command.Aspirante.ComandoActualizarAspirante.GetEstatus">
+            <summary>
+            Se obtiene el estado resultante de la operacion de actualizar aspirante
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplicationBackend.BusinessLogic.Command.Aspirante.ComandoConsultarAspirante.Ejecutar">
+            <summary>
+            Realiza el llamado para la consulta del aspirante por el numero de indentificacion
+            </summary>
+        </member>
+        <member name="M:WebApplicationBackend.BusinessLogic.Command.Aspirante.ComandoConsultarAspirante.GetEntidades">
+            <summary>
+            Returna la lista de aspirantes del tipo Entidad
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplicationBackend.BusinessLogic.Command.Aspirante.ComandoCrearAspirante.Ejecutar">
+            <summary>
+            Realiza el llamado para la creacion del aspirante por el numero de indentificacion
+            </summary>
+        </member>
+        <member name="M:WebApplicationBackend.BusinessLogic.Command.Aspirante.ComandoCrearAspirante.GetEstatus">
+            <summary>
+            Se obtiene el estado resultante de la operacion de registrar aspirante
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WebApplicationBackend.BusinessLogic.Command.Aspirante.ComandoEliminarAspirante">
+            <summary>
+            Comando para eliminar un aspirante
+            </summary>
+        </member>
+        <member name="M:WebApplicationBackend.BusinessLogic.Command.Aspirante.ComandoEliminarAspirante.Ejecutar">
+            <summary>
+            Realiza el llamado para la eliminacion del aspirante por el numero de indentificacion
+            </summary>
+        </member>
+        <member name="M:WebApplicationBackend.BusinessLogic.Command.Aspirante.ComandoEliminarAspirante.GetEstatus">
+            <summary>
+            Se obtiene el estado resultante de la operacion de eliminar el aspirante por la identificacion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplicationBackend.BusinessLogic.Command.Aspirante.ComandoValidarNombreCasa.Ejecutar">
+            <summary>
+            Valida el nombre de Casa a la que aspira pertenecer 
+            (Solo 4 posibles opciones: "Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin")
+            Sin importar mayusculas
+            </summary>
+        </member>
+        <member name="M:WebApplicationBackend.BusinessLogic.Command.Aspirante.ComandoValidarNombreCasa.GetEstatus">
+            <summary>
+            Se obtiene el estado resultante de la operacion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WebApplicationBackend.BusinessLogic.Command.Comando">
+            <summary>
+            patron de diseno comando
+            </summary>
+        </member>
+        <member name="T:WebApplicationBackend.BusinessLogic.Factory.FabricaComando">
+            <summary>
+            Patron Fabrica utilizado para Comando respectivo a cada operacion
+            CRUD
+            </summary>
+        </member>
+        <member name="M:WebApplicationBackend.BusinessLogic.Factory.FabricaComando.CrearComandoCrearAspirante(WebApplicationBackend.Common.Entities.Entidad)">
+            <summary>
+            
+            </summary>
+            <param name="aspirante"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplicationBackend.BusinessLogic.Factory.FabricaComando.CrearComandoActualizarAspirante(WebApplicationBackend.Common.Entities.Entidad)">
+            <summary>
+            
+            </summary>
+            <param name="aspirante"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplicationBackend.BusinessLogic.Factory.FabricaComando.CrearComandoConsultarTodosAspirante">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplicationBackend.BusinessLogic.Factory.FabricaComando.CrearComandoEliminarAspirante(System.Int32)">
+            <summary>
+            Realiza la instancia del comando que elimina el aspirante mediante su numero de identificacion
+            </summary>
+            <param name="numAspirante"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplicationBackend.BusinessLogic.Factory.FabricaComando.CrearComandoValidarNombreCasa(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="nombreCasa"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApplicationBackend.Common.Const.HomeTypes">
+            <summary>
+            Enumerados para los nombres de los tipos de casa
+            Solo 4 opciones
+            </summary>
+        </member>
+        <member name="P:WebApplicationBackend.Common.CustomException.ExcepcionGeneral.Excepcion">
+            <summary>
+            Getters y Setters del atributo _excepcion
+            </summary>
+        </member>
+        <member name="P:WebApplicationBackend.Common.CustomException.ExcepcionGeneral.FechaHora">
+            <summary>
+            Getters y Setters del atributo _fechaHora
+            </summary>
+        </member>
+        <member name="P:WebApplicationBackend.Common.CustomException.ExcepcionGeneral.Mensaje">
+            <summary>
+            Getters y Setters del atributo _mensaje
+            </summary>
+        </member>
+        <member name="F:WebApplicationBackend.Common.Aspirante._fechaCreacion">
+            <summary>
+            Datos ingresados internamente por el servidor
+            </summary>
+        </member>
+        <member name="F:WebApplicationBackend.Common.Aspirante._fechaModificacion">
+            <summary>
+            Datos ingresados internamente por el servidor
+            </summary>
+        </member>
+        <member name="P:WebApplicationBackend.Common.Entities.Entidad.Id">
+            <summary>
+            Getters y Setters de ID - Siguiendo a Entity
+            </summary>
+        </member>
+        <member name="T:WebApplicationBackend.Common.Entities.Factory.FabricaEntidad">
+            <summary>
+            Patron Fabrica
+            </summary>
+        </member>
+        <member name="M:WebApplicationBackend.Common.Entities.Factory.FabricaEntidad.CrearAspirante">
+            <summary>
+            Metodo que realiza una instancia de tipo aspirante : Patron Fabrica
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplicationBackend.Common.Entities.Factory.FabricaEntidad.CrearAspirante(System.Int32,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Metodo que realiza una instancia de tipo aspirante insertando los datos: Patron Fabrica
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WebApplicationBackend.Common.Resources.MensajeRespuesta">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:WebApplicationBackend.Common.Resources.MensajeRespuesta.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:WebApplicationBackend.Common.Resources.MensajeRespuesta.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:WebApplicationBackend.Common.Resources.MensajeRespuesta.CampoNoPermitido">
+            <summary>
+              Looks up a localized string similar to El campo {0} no esta en el rango permitido.
+            </summary>
+        </member>
+        <member name="P:WebApplicationBackend.Common.Resources.MensajeRespuesta.ConexionFallida">
+            <summary>
+              Looks up a localized string similar to No se pudo conectar a la base de datos..
+            </summary>
+        </member>
+        <member name="P:WebApplicationBackend.Common.Resources.MensajeRespuesta.ParametroInvalido">
+            <summary>
+              Looks up a localized string similar to Ingrese un numero de identificacion valido.
+            </summary>
+        </member>
+        <member name="P:WebApplicationBackend.Common.Resources.MensajeRespuesta.UsuarioNoEncontrado">
+            <summary>
+              Looks up a localized string similar to No se pudo encontrar el usuario solicitado.
+            </summary>
+        </member>
+        <member name="M:WebApplicationBackend.Controllers.AspiranteController.GetAll">
+            <summary>
+            Obtiene toda la lista de los aspirantes ingresados
+            </summary>
+            <returns cref="T:WebApplicationBackend.Common.Aspirante"></returns>
+            <remarks>
+            Obtiene toda la lista de los aspirantes ingresados
+            </remarks>                             
+            <response code="200" cref="T:WebApplicationBackend.Common.Aspirante">OK. Devuelve la lista de aspirantes ingresados.</response>        
+            <response code="404" cref="T:WebApplicationBackend.Common.Aspirante">NotFound. No se ha encontrado el objeto solicitado.</response>        
+            <response code="500" cref="T:WebApplicationBackend.Common.Aspirante">InternalServerError. Ha ocurrido un error interno dentro del servidor.</response>        
+        </member>
+        <member name="M:WebApplicationBackend.Controllers.AspiranteController.Post(WebApplicationBackend.Services.DTO.DTOAspirante)">
+            <summary>
+            Registra un aspirante
+            </summary>
+            <returns></returns>
+            <remarks>
+            Registra un aspirante
+            </remarks>                             
+            <response code="200" cref="T:WebApplicationBackend.Services.DTO.DTOAspirante">OK. Operacion exitosa.</response>               
+            <response code="500" cref="T:WebApplicationBackend.Services.DTO.DTOAspirante">InternalServerError. Ha ocurrido un error interno dentro del servidor.</response>        
+        </member>
+        <member name="M:WebApplicationBackend.Controllers.AspiranteController.Put(System.Int32,WebApplicationBackend.Services.DTO.DTOAspirante)">
+            <summary>
+            Actualiza un aspirante dado su numero de identificacion
+            </summary>
+            <returns></returns>
+            <remarks>
+             Actualiza un aspirante dado su numero de identificacion
+            </remarks>                             
+            <response code="200" cref="T:WebApplicationBackend.Services.DTO.DTOAspirante">OK. Operacion exitosa.</response>  
+            <response code="400" cref="T:WebApplicationBackend.Services.DTO.DTOAspirante">BadRequest. El formato ingresado no es valido.</response> 
+            <response code="500" cref="T:WebApplicationBackend.Services.DTO.DTOAspirante">InternalServerError. Ha ocurrido un error interno dentro del servidor.</response>        
+        </member>
+        <member name="M:WebApplicationBackend.Controllers.AspiranteController.Delete(System.Int32)">
+            <summary>
+            Elimina un aspirante
+            </summary>
+            <returns></returns>
+            <remarks>
+            Elimina un aspirante
+            </remarks>                             
+            <response code="200" cref="T:WebApplicationBackend.Services.DTO.DTOAspirante">OK. Operacion exitosa.</response>  
+            <response code="400" cref="T:WebApplicationBackend.Services.DTO.DTOAspirante">BadRequest. El formato ingresado no es valido.</response> 
+            <response code="404" cref="T:WebApplicationBackend.Services.DTO.DTOAspirante">NotFound. No se ha encontrado el objeto solicitado.</response>    
+            <response code="500" cref="T:WebApplicationBackend.Services.DTO.DTOAspirante">InternalServerError. Ha ocurrido un error interno dentro del servidor.</response>        
+        </member>
+        <member name="M:WebApplicationBackend.Data.DAO.DAO.CrearStringConexion">
+            <summary>
+             Busca el string de conexión a la base de datos en el archivo web.config, dicho string se llama "postgrestring"
+            </summary>
+        </member>
+        <member name="M:WebApplicationBackend.Data.DAO.DAO.EjecutarReader">
+            <summary>
+            Ejecutar el StoredProcedure con un valor de retorno (ResultSet), habilita el uso de las funciones "GetInt, GetString, etc" y devuelve un objeto DataTable.
+            </summary>
+        </member>
+        <member name="M:WebApplicationBackend.Data.DAO.DAO.EjecutarQuery">
+            <summary>
+            Ejecutar el StoredProcedure sin valor de retorno (ResultSet), devuelve el número de filas afectadas.
+            </summary>
+        </member>
+        <member name="M:WebApplicationBackend.Data.DAO.DAO.StoredProcedure(System.String)">
+            <summary>
+            Crea el comando para ejecutar el StoredProcedure, Ejemplo: StoredProcedure("nombreSP(@param)")
+            </summary>
+        </member>
+        <member name="M:WebApplicationBackend.Data.DAO.DAOAspirante.ActualizarAspirante(WebApplicationBackend.Common.Entities.Entidad)">
+            <summary>
+            Actualiza el aspirante de acuerdo a su numero de identificacion
+            </summary>
+            <param name="aspirante"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplicationBackend.Data.DAO.DAOAspirante.AgregarAspirante(WebApplicationBackend.Common.Entities.Entidad)">
+            <summary>
+            Agrega el objeto Aspirante con sus datos pasando por Entidad
+            </summary>
+            <param name="aspirante"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplicationBackend.Data.DAO.DAOAspirante.EliminarAspirantePorId(System.Int32)">
+            <summary>
+            Elimina el aspirannte indicando su numero de identificacion
+            </summary>
+            <param name="identificacion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplicationBackend.Data.DAO.DAOAspirante.ObtenerAspirantes">
+            <summary>
+            Consulta todos los aspirantes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WebApplicationBackend.Data.DAO.Interface.IDAOAspirante">
+            <summary>
+            Plantillas para las operaciones CRUD sobre Aspirante
+            </summary>
+        </member>
+        <member name="M:WebApplicationBackend.Data.Factory.FabricaDao.CrearDAOAspirante">
+            <summary>
+            Devuelve la instancia de DAOAspirante
+            Creado dom 30/may/2021
+            </summary>
+            <returns>DAOUsuario</returns>
+        </member>
+        <member name="T:WebApplicationBackend.Services.DTO.DTOAspirante">
+            <summary>
+            Clase que representa Aspirante. En este caso se mantiene todo igual
+            </summary>
+        </member>
+        <member name="T:WebApplicationBackend.Services.DTO.DTOAspiranteConsulta">
+            <summary>
+            Clase que representa Aspirante. En este caso se mantiene todo igual
+            </summary>
+        </member>
+        <member name="T:WebApplicationBackend.Services.Factory.FabricaDTO">
+            <summary>
+            Patron fabrica para instancia de los DTO
+            </summary>
+        </member>
+        <member name="M:WebApplicationBackend.Services.Factory.FabricaDTO.CrearDTOAspiranteConsulta(System.Int32,System.String,System.String,System.Int32,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Llama al constructor para obtener los datos de aspirante
+            </summary>
+            <param name="identificacion"></param>
+            <param name="nombre"></param>
+            <param name="apellido"></param>
+            <param name="edad"></param>
+            <param name="nombreCasa"></param>
+            <param name="fechaCreacion"></param>
+            <param name="fechaModifcacion"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApplicationBackend.Services.Translators.Factory.FabricaTraductor">
+            <summary>
+            Instancia la clase Traductor
+            </summary>
+        </member>
+        <member name="M:WebApplicationBackend.Services.Translators.Factory.FabricaTraductor.CrearTraductorAspirante">
+            <summary>
+            Metodo con el cual se instancia un objeto de tipo TraductorAspirante
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WebApplicationBackend.Services.Translators.TraductorAspirante">
+            <summary>
+            Clase con el fin de convertir el respose Entidad a Aspirante
+            </summary>
+        </member>
+        <member name="M:WebApplicationBackend.Services.Translators.TraductorAspirante.CrearDto(WebApplicationBackend.Common.Entities.Entidad)">
+            <summary>
+            Metodo con el cual se transforma una entidad en un DTOAsirante
+            </summary>
+            <param name="entidad">Entidad que se desea transformar</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplicationBackend.Services.Translators.TraductorAspirante.CrearEntidad(WebApplicationBackend.Services.DTO.DTOAspirante)">
+            <summary>
+            Metodo con el cual se transforma un DTOAspirante a una Entidad Aspirante
+            </summary>
+            <remarks> No se indica en el dto la fechaCreacion ni fechaModificacion</remarks>
+            <param name="dto">Objeto dto que se desea transformar</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApplicationBackend.Services.Translators.TraductorAspirante.CrearListaDto(System.Collections.Generic.List{WebApplicationBackend.Common.Entities.Entidad})">
+            <summary>
+            Metodo con el cual se transforma de una lista de entidades a una lista de dtos
+            </summary>
+            <param name="entidades">Lista de entidades que se va a transformar</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
